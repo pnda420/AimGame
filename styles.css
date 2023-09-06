@@ -36,12 +36,12 @@ img {
   }
 
   .timer {
-    font-size: 24px; /* Schriftgröße */
+    font-size: 50px; /* Schriftgröße */
     font-weight: bold; /* Fetter Text */
     padding: 5px 10px; /* Innenabstand oben/unten und links/rechts */
     background-color: #333; /* Hintergrundfarbe */
     color: #fff; /* Textfarbe */
-    border-radius: 5px; /* Abgerundete Ecken */
+    border-radius: 9px; /* Abgerundete Ecken */
   }
 
 .resizable {
@@ -90,6 +90,7 @@ img {
     white-space: nowrap;
     will-change: box-shadow, transform;
     font-size: 18px;
+    margin-left: 5px;
 }
 
 .button-30:focus {

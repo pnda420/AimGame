@@ -18,12 +18,39 @@ target2.style.display = "none";
 document.addEventListener("DOMContentLoaded", function () {
     const start = document.getElementById("start");
     start.addEventListener("click", function () {
-        startGame = true;
-        randomizeImg(target, playArea);
-        randomizeImg(target2, playArea);
-        target.style.display = "block";
-        target2.style.display = "block";
-        updateTimer();
+        if (!startGame) {
+            startGame = true;
+            target.style.display = "";
+            target2.style.display = "";
+            randomizeImg(target, playArea);
+            randomizeImg(target2, playArea);
+
+            updateTimer();
+        }
+    })
+
+    const set10Button = document.getElementById("set10Button");
+    set10Button.addEventListener("click", function () {
+        if (!startGame) {
+            remainingTime = 10000;
+            timerElement.textContent = "10:000";
+        }
+    })
+
+    const set15Button = document.getElementById("set15Button");
+    set15Button.addEventListener("click", function () {
+        if (!startGame) {
+            remainingTime = 15000;
+            timerElement.textContent = "15:000";
+        }
+    })
+
+    const set20Button = document.getElementById("set20Button");
+    set20Button.addEventListener("click", function () {
+        if (!startGame) {
+            remainingTime = 20000;
+            timerElement.textContent = "20:000";
+        }
     })
 
     target.addEventListener("click", function () {
