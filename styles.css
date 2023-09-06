@@ -1,5 +1,13 @@
 body{
     background-color: #8ecae6;
+    margin: 0;
+    height: 100vh; /* 100% der Bildschirmhöhe */
+    display: flex;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    user-select: none;
+    cursor: url('target.png'), auto;
+    cursor: crosshair;
 }
 
 .target{
@@ -7,25 +15,50 @@ body{
     top: 200px;
     left: 400px;
     position: absolute;
-    left: 50px; 
-    top: 50px;
 }
 
-img {  
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
- }
+.hits {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: orange;
+    padding: 8px 15px; /* Innenabstand oben/unten und links/rechts */
+    color: black; /* Textfarbe auf Schwarz ändern */
+    border-radius: 10px; /* Stärker abgerundete Ecken für ein "schöneres" Aussehen */
+    font-size: 20px; /* Größere Schriftgröße */
+    font-weight: bold; /* Fetten Text für bessere Lesbarkeit */
+    text-align: center; /* Zentrierten Text */
+  }
+  
 
+img {
+    user-select: none;
+  }
+
+  .timer {
+    font-size: 24px; /* Schriftgröße */
+    font-weight: bold; /* Fetter Text */
+    padding: 5px 10px; /* Innenabstand oben/unten und links/rechts */
+    background-color: #333; /* Hintergrundfarbe */
+    color: #fff; /* Textfarbe */
+    border-radius: 5px; /* Abgerundete Ecken */
+  }
+
+.resizable {
+    width: 800px;
+    height: 500px;
+    resize: both;
+    overflow: auto; 
+    position: relative; /* Füge diese Zeile hinzu */
+    border: 5px solid #000; 
+    border-radius: 15px;
+}
 
 .topBar{
     display: flex;
     width: 100%;
     justify-content: center;
     position: fixed;
-    top: 20px; 
     left: 0;
 }
 .button-30 {

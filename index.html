@@ -6,13 +6,27 @@
     <title>AimBooster</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="topBar">
+<body draggable="false">
+    <div class="topBar" style="top: 20px;">
         <button class="button-30" role="button" id="start">Start</button>
+        
+    </div>
+    <div class="topBar" style="top: 90px">
+        <div id="timer" class="timer">00:10:000</div>        
     </div>
 
-    <img src="/target.png" class="target" id="target" draggable="false" >
     
+
+    <div id="playArea" class="resizable" >
+        <div id="hits" class="hits">0</div>
+        <img src="/target.png" class="target" id="target" draggable="false">
+        <img src="/target.png" class="target" id="target2" draggable="false">
+    </div>
+
+    
+
+   
+    <audio id="clickSound" src="click.mp3"></audio>
     <script src="script.js"></script>
 </body>
 </html>
