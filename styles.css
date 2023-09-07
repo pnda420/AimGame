@@ -19,6 +19,7 @@ body{
 
 .hits {
     position: absolute;
+    font-family: "Open Sans", sans-serif;
     right: 10px;
     top: 10px;
     background-color: orange;
